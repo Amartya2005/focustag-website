@@ -43,7 +43,7 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-fallback" aria-hidden="true"></div>
       <canvas id="stage" aria-label="Interactive 3D model of the FocusTag checkpoint and phone"></canvas>
-      <img class="hero-photo" src="assets/tag-front.jpg" alt="FocusTag NFC tile, front tap ring" />
+      <img class="hero-photo" data-asset="front" alt="FocusTag NFC tile, front tap ring" />
       <div class="hero-copy">
         <p class="eyebrow">Physical checkpoint · NFC</p>
         <h1 id="hero-title">The tag.<br>Then the quiet.</h1>
@@ -69,16 +69,16 @@
         <p class="sub">A rounded NFC tile. Recessed tap ring on the face. Teardrop mounts on the back. White or sand. Hang it once. Students tap it every time they mean to work.</p>
         <div class="product-grid">
           <figure class="shot shot-lg">
-            <img src="assets/tag-front.jpg" alt="White FocusTag tile, front face with circular NFC tap ring" />
+            <img data-asset="front" alt="White FocusTag tile, front face with circular NFC tap ring" />
             <figcaption>Front · tap ring</figcaption>
           </figure>
           <figure class="shot shot-sm">
-            <img src="assets/tag-back.jpg" alt="Back of FocusTag tile with FOCUSTAG embossed and two teardrop mount slots" />
+            <img data-asset="back" alt="Back of FocusTag tile with FOCUSTAG embossed and two teardrop mount slots" />
             <figcaption>Back · mount slots</figcaption>
           </figure>
         </div>
         <figure class="shot shot-wide">
-          <img src="assets/tag-family.jpg" alt="White and sand FocusTag tiles fanned together" />
+          <img data-asset="family" alt="White and sand FocusTag tiles fanned together" />
           <figcaption>White · Sand</figcaption>
         </figure>
         <div class="studio" aria-label="Studio 3D viewer">
@@ -112,7 +112,7 @@
           </ul>
         </div>
         <figure class="pair">
-          <img src="assets/tag-colors-photo.png" alt="Hand holding white and sand FocusTag NFC tiles" />
+          <img data-asset="colors" alt="Hand holding white and sand FocusTag NFC tiles" />
         </figure>
       </div>
     </section>
@@ -207,6 +207,11 @@
       });
     });
   </script>
+  <script src="asset-front.js"></script>
+  <script src="asset-back.js"></script>
+  <script src="asset-family.js"></script>
+  <script src="asset-colors.js"></script>
+  <script src="assets.js"></script>
   <script type="module" src="app.js"></script>
 </body>
 </html>
