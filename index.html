@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FocusTag</title>
+  <meta name="description" content="FocusTag pairs physical NFC checkpoints with mobile focus enforcement. Tap in. Stay with the work." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="wordmark" href="#top" aria-label="FocusTag home">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+          <circle cx="9" cy="9" r="8" stroke="#fff" stroke-width="1.2"/>
+          <circle cx="9" cy="9" r="3.2" stroke="#ff6308" stroke-width="1.2"/>
+          <circle cx="9" cy="9" r="1.1" fill="#fff"/>
+        </svg>
+        FocusTag
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#product">Product</a>
+        <a href="#how-it-works">System</a>
+        <a href="#for-institutions">Institutions</a>
+      </nav>
+      <div class="nav-right">
+        <a class="btn btn-fill desktop-cta" href="https://github.com/0xyusufz/FocusTag-Releases/releases/download/v1.0/FocusTag-v1.0.apk">Try FocusTag</a>
+        <button class="menu" aria-label="Open menu" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-fallback" aria-hidden="true"></div>
+      <canvas id="stage" aria-label="Interactive 3D model of the FocusTag checkpoint and phone"></canvas>
+      <img class="hero-photo" src="assets/tag-front.jpg" alt="FocusTag NFC tile, front tap ring" />
+      <div class="hero-copy">
+        <p class="eyebrow">Physical checkpoint · NFC</p>
+        <h1 id="hero-title">The tag.<br>Then the quiet.</h1>
+        <p class="lede">A wall-mounted NFC tag starts a focused session on the phone that taps it.</p>
+        <div class="hero-actions">
+          <a class="btn btn-fill" href="https://github.com/0xyusufz/FocusTag-Releases/releases/download/v1.0/FocusTag-v1.0.apk">Download</a>
+          <a class="btn btn-line" href="#product">Inspect product</a>
+        </div>
+      </div>
+      <p class="inspect">Drag to orbit · Scroll to zoom</p>
+    </section>
+    <div class="band">
+      <div class="wrap band-grid">
+        <div class="band-item"><span>01 / Checkpoint</span><strong>Tap the tag in the room.</strong></div>
+        <div class="band-item"><span>02 / Session</span><strong>Focus binds to that place.</strong></div>
+        <div class="band-item"><span>03 / Enforcement</span><strong>Distractions stay outside.</strong></div>
+      </div>
+    </div>
+    <section id="product">
+      <div class="wrap">
+        <p class="kicker">Hardware</p>
+        <h2>FocusTag checkpoint.</h2>
+        <p class="sub">A rounded NFC tile. Recessed tap ring on the face. Teardrop mounts on the back. White or sand. Hang it once. Students tap it every time they mean to work.</p>
+        <div class="product-grid">
+          <figure class="shot shot-lg">
+            <img src="assets/tag-front.jpg" alt="White FocusTag tile, front face with circular NFC tap ring" />
+            <figcaption>Front · tap ring</figcaption>
+          </figure>
+          <figure class="shot shot-sm">
+            <img src="assets/tag-back.jpg" alt="Back of FocusTag tile with FOCUSTAG embossed and two teardrop mount slots" />
+            <figcaption>Back · mount slots</figcaption>
+          </figure>
+        </div>
+        <figure class="shot shot-wide">
+          <img src="assets/tag-family.jpg" alt="White and sand FocusTag tiles fanned together" />
+          <figcaption>White · Sand</figcaption>
+        </figure>
+        <div class="studio" aria-label="Studio 3D viewer">
+          <canvas id="studio"></canvas>
+          <p class="studio-cap">Live model · drag to inspect</p>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works">
+      <div class="wrap">
+        <p class="kicker">System</p>
+        <h2>From tap to quiet<br>in seconds.</h2>
+        <p class="sub">No timer you can dismiss. The work begins when the phone meets the tag.</p>
+        <div class="steps">
+          <article class="step"><em>01</em><h3>Tap</h3><p>A designated NFC point in a classroom, library, or lab. One contact starts the session.</p></article>
+          <article class="step"><em>02</em><h3>Bind</h3><p>The session is associated with the location where it started. Presence is the credential.</p></article>
+          <article class="step"><em>03</em><h3>Hold</h3><p>Distractions are restricted while the session is active. End it on purpose — or stay.</p></article>
+        </div>
+      </div>
+    </section>
+    <section id="for-students">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Students</p>
+          <h2>Phone meets tag.<br>Session begins.</h2>
+          <p class="sub">FocusTag asks for a physical act first. The same way you sit down before you open a book.</p>
+          <ul class="list">
+            <li><span>HABIT</span>The tap makes intention visible.</li>
+            <li><span>PLACE</span>Sessions stay tied to the room that started them.</li>
+            <li><span>QUIET</span>The phone is restricted for the length of the session.</li>
+          </ul>
+        </div>
+        <figure class="pair">
+          <img src="assets/tag-colors-photo.png" alt="Hand holding white and sand FocusTag NFC tiles" />
+        </figure>
+      </div>
+    </section>
+    <section id="for-institutions">
+      <div class="wrap">
+        <p class="kicker">Institutions</p>
+        <h2>Give every quiet room<br>a digital layer.</h2>
+        <p class="sub">Configure locations, NFC tags, classes, and authorized staff. Teachers monitor sessions for the groups they own — not a campus-wide feed.</p>
+        <div class="ops">
+          <div class="op"><small>NFC</small>Physical tags</div>
+          <div class="op"><small>Space</small>Classroom / library</div>
+          <div class="op"><small>Student</small>Taps to focus</div>
+          <div class="op"><small>Session</small>Active & logged</div>
+          <div class="op"><small>Teacher</small>Class monitoring</div>
+        </div>
+        <div class="split" style="margin-top:96px;align-items:start">
+          <div>
+            <p class="kicker">Pilot</p>
+            <h2>Start with<br>one building.</h2>
+            <p class="sub">Tag a library floor or a set of rooms. Invite one cohort. Measure whether presence changes how long students stay with the work.</p>
+            <div class="hero-actions" style="justify-content:flex-start;margin-top:28px">
+              <a class="btn btn-fill" href="mailto:hello@focustag.app?subject=FocusTag%20pilot">Request a pilot</a>
+              <a class="btn btn-line" href="https://github.com/0xyusufz/FocusTag-Releases/releases/download/v1.0/FocusTag-v1.0.apk">Student app</a>
+            </div>
+          </div>
+          <ul class="list" style="margin-top:8px">
+            <li><span>01</span>Map rooms. Mount checkpoints.</li>
+            <li><span>02</span>Enroll a class. Authorize its teachers.</li>
+            <li><span>03</span>Students tap in. Sessions appear in place.</li>
+            <li><span>04</span>Review what held. No theater.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cta" id="download">
+      <div class="wrap">
+        <p class="kicker">Available now</p>
+        <h2>Ready when the room is.</h2>
+        <p class="sub">FocusTag for Android. Bring the phone to the tag.</p>
+        <div class="hero-actions">
+          <a class="btn btn-fill" href="https://github.com/0xyusufz/FocusTag-Releases/releases/download/v1.0/FocusTag-v1.0.apk">Download FocusTag</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <strong>FocusTag</strong>
+          <p>Physical NFC checkpoints with mobile focus enforcement.</p>
+        </div>
+        <div>
+          <strong>Product</strong>
+          <a href="#product">Hardware</a>
+          <a href="#how-it-works">System</a>
+          <a href="#for-students">Students</a>
+          <a href="#for-institutions">Institutions</a>
+        </div>
+        <div>
+          <strong>Campus</strong>
+          <a href="#for-institutions">Pilot program</a>
+          <a href="mailto:hello@focustag.app">Contact</a>
+        </div>
+        <div>
+          <strong>Legal</strong>
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+      <div class="legal">
+        <span>© 2026 FocusTag</span>
+        <span>Focus better. Stay accountable.</span>
+      </div>
+    </div>
+  </footer>
+  <div class="dock" aria-label="Mobile actions">
+    <a class="btn btn-line" href="#for-institutions">Pilot</a>
+    <a class="btn btn-fill" href="https://github.com/0xyusufz/FocusTag-Releases/releases/download/v1.0/FocusTag-v1.0.apk">Download</a>
+  </div>
+  <script>
+    const nav = document.getElementById("nav");
+    const menu = nav.querySelector(".menu");
+    menu.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      menu.setAttribute("aria-expanded", String(open));
+    });
+    nav.querySelectorAll(".nav-links a").forEach((a) => {
+      a.addEventListener("click", () => {
+        nav.classList.remove("open");
+        menu.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
